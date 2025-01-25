@@ -1,4 +1,5 @@
 const SocialLinks = (props) => {
+  // eslint-disable-next-line react/prop-types
   const { href, itemClass, icon } = props;
   console.log(props);
   return (

@@ -1,3 +1,4 @@
+// eslint-disable-next-line react/prop-types
 const Tour = ({ image, date, title, text, location, duration, price }) => {
   return (
     <article className="tour-card">
