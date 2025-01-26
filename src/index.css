@@ -563,3 +563,73 @@ Navbar
     color: var(--clr-primary-8);
   }
 }
+/* Center div containers with images only on mobile */
+@media screen and (max-width: 992px) {
+  /* Target specific containers for mobile adjustments */
+  .tour-card,
+  .about-img,
+  .service {
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    justify-content: center;
+    align-items: center;
+    margin: 1rem auto; /* Center container horizontally */
+    text-align: center; /* Center text content, if any */
+  }
+
+  /* Images inside these containers */
+  .tour-img,
+  .about-photo,
+  .service-icon {
+    margin: 0 auto; /* Center the image within the container */
+    max-width: 90%; /* Ensure responsiveness for smaller screens */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  /* Optional: Adjust text width for better alignment */
+  .service-text,
+  .about-info {
+    max-width: 90%; /* Keep text aligned with image width */
+    text-align: center; /* Center-align text */
+  }
+  /* Responsive styles for the tour card and image container */
+  @media screen and (max-width: 992px) {
+    .tour-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 1rem auto;
+      text-align: center;
+    }
+
+    .tour-img-container {
+      position: relative;
+      width: 100%; /* Make the image container full-width */
+      max-width: 90%; /* Add a max-width for better control */
+      margin: 0 auto;
+      overflow: hidden; /* Prevent content overflow */
+      border-radius: 0.5rem; /* Optional: Add rounded corners */
+    }
+
+    .tour-img {
+      width: 100%;
+      height: auto;
+      object-fit: cover; /* Ensure the image covers the container */
+      display: block;
+    }
+
+    .tour-date {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+      color: var(--clr-primary-5);
+      text-transform: capitalize;
+      padding: 0.25rem 0.5rem;
+      margin-right: 1.2rem;
+      font-size: 0.875rem;
+      border-radius: 0.25rem; /* Optional: Add rounded corners */
+    }
+  }
+}
